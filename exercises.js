@@ -167,16 +167,35 @@ function contains(arr, item) {
 function addNumbers(numbers) {
   //numbers is an array of integers.
   //add all of the integers and return the value
+  var sum = 0;
+  for (var i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
 }
 
 function averageTestScore(testScores) {
   //testScores is an array.  Iterate over testScores and compute the average.
   //return the average
+  var total = 0;
+  var average = 0;
+  for (var i = testScores.length -1; i >= 0; i--) {
+    total += testScores[i];
+  }
+average = total/testScores.length;
+return average;
 }
 
 function largestNumber(numbers) {
   //numbers is an array of integers
   //return the largest integer
+  var max = 0;
+  for (var i = 0; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
+  return max;
 }
 
 //Do not modify code below this line.
