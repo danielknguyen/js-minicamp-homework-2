@@ -91,9 +91,18 @@ function isPrime(num) {
   //hint: a prime number is only evenly divisible by itself and 1
   //hint2: you can solve this using a for loop
   //note: 0 and 1 are NOT considered prime numbers
-  
+  if (num === 0 || num === 1) {
+    return false;
+  }
+  for (var i = 2; i < num; i++) {
+     if (num % i === 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 }
-
+isPrime(50);
 
 function returnFirst(arr) {
   //return the first item from the array
@@ -117,8 +126,11 @@ function incrementByOne(arr) {
   //arr is an array of integers  
   //increase each integer by one
   //return the array
+  for (var i = arr.length - 1; i >= 0; i--) {
+  arr[i] += 1;
+ }
+ return arr;
 }
-
 
 function addItemToArray(arr, item) {
   //add the item to the end of the array
